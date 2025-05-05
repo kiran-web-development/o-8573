@@ -93,7 +93,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                   <Twitter size={16} />
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-neutral-200 rounded-full text-neutral-600 hover:bg-primary hover:text-white transition-colors">
-                  <LinkedIn size={16} />
+                  <Linkedin size={16} />
                 </a>
               </div>
             </div>
