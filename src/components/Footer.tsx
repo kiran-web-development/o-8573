@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
-import { Mail, Phone, Facebook, Instagram, Twitter, MapPin, LinkedIn } from 'lucide-react';
+import { Mail, Phone, Facebook, Instagram, Twitter, MapPin, Linkedin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 interface FooterProps {
