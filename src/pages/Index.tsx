@@ -2,13 +2,12 @@
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import Manifesto from '@/components/Manifesto';
-import Gap from '@/components/Gap';
-import FoundersInSearch from '@/components/FoundersInSearch';
-import InvestmentApproach from '@/components/InvestmentApproach';
-import Community from '@/components/Community';
-import About from '@/components/About';
+import AboutSection from '@/components/AboutSection';
+import ProductsSection from '@/components/ProductsSection';
+import GallerySection from '@/components/GallerySection';
+import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import CustomCursor from '@/components/CustomCursor';
 
 const Index = () => {
   useEffect(() => {
@@ -41,14 +40,13 @@ const Index = () => {
   
   return (
     <main className="relative">
+      <CustomCursor />
       <Header />
       <Hero />
-      <Manifesto />
-      <Gap />
-      <FoundersInSearch />
-      <InvestmentApproach />
-      <About />
-      <Community />
+      <AboutSection />
+      <ProductsSection />
+      <GallerySection />
+      <ContactSection />
       <Footer />
     </main>
   );
