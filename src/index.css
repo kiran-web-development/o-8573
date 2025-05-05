@@ -98,6 +98,30 @@
   .text-pretty {
     text-wrap: pretty;
   }
+  
+  @keyframes gradient-x {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+  
+  .animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+  }
+  
+  .hover-text {
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .hover-text:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
 }
 
 @layer components {

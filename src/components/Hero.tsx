@@ -8,8 +8,15 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center pt-20 pb-20 overflow-hidden bg-gradient-to-b from-neutral-50 to-neutral-100">
       <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center">
+        {/* Welcome text with color animation */}
+        <FadeIn delay={0} className="mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-light italic text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-primary animate-gradient-x hover-text">
+            Welcome to our fancy world of joy & elegance
+          </h2>
+        </FadeIn>
+        
         {/* Store image */}
-        <FadeIn delay={0}>
+        <FadeIn delay={0.1}>
           <div className="w-full max-w-3xl mx-auto mb-8 rounded-lg overflow-hidden shadow-xl">
             <img 
               src="/public/lovable-uploads/c6799f2d-7865-4ab5-bbb8-d6c4100c6110.png" 
@@ -19,7 +26,7 @@ const Hero = () => {
           </div>
         </FadeIn>
         
-        <FadeIn delay={0.1}>
+        <FadeIn delay={0.2}>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 mb-6">
               Welcome to <span className="text-primary block">SRI SAI KUMAR FANCY SHOP</span>
