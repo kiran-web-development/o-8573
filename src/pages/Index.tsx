@@ -32,6 +32,9 @@ const Index = () => {
       anchor.addEventListener('click', handleAnchorClick);
     });
     
+    // Set page title
+    document.title = "Sri Sai Kumar Fancy Shop";
+    
     return () => {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.removeEventListener('click', handleAnchorClick);

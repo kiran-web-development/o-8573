@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '../hooks/use-mobile';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,10 +37,10 @@ const Header = () => {
   };
 
   const navLinks = [
-    { href: "#about", label: "About Us" },
-    { href: "#products", label: "Products" },
-    { href: "#gallery", label: "Gallery" },
-    { href: "#contact", label: "Contact" },
+    { href: "#about", label: "ABOUT" },
+    { href: "#products", label: "PRODUCTS" },
+    { href: "#gallery", label: "GALLERY" },
+    { href: "#contact", label: "CONTACT" },
   ];
 
   return (
@@ -52,25 +53,42 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         {/* Logo */}
-        <a href="/" className="text-lg md:text-xl font-bold text-primary">
-          SRI SAI KUMAR FANCY SHOP
+        <a href="/" className="text-lg md:text-xl font-bold text-neutral-800">
+          SRI SAI KUMAR<span className="text-red-500">.</span>
         </a>
 
         {/* Nav Links - Desktop */}
         {!isMobile && (
-          <nav className="hidden md:flex gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-neutral-700 hover:text-primary transition-colors relative overflow-hidden group"
-                onClick={handleNavLinkClick}
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+          <div className="flex items-center gap-8">
+            <nav className="hidden md:flex gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium text-neutral-700 hover:text-primary transition-colors"
+                  onClick={handleNavLinkClick}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            
+            {/* Social Links */}
+            <div className="hidden md:flex items-center gap-4 border-l border-gray-200 pl-6">
+              <a href="mailto:contact@srisaikumar.com" className="text-neutral-600 hover:text-primary transition-colors">
+                <Mail size={18} />
               </a>
-            ))}
-          </nav>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-primary transition-colors">
+                <Facebook size={18} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-primary transition-colors">
+                <Instagram size={18} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-primary transition-colors">
+                <Twitter size={18} />
+              </a>
+            </div>
+          </div>
         )}
 
         {/* Mobile Menu Button */}
@@ -104,6 +122,22 @@ const Header = () => {
               </a>
             ))}
           </nav>
+          
+          {/* Social Links - Mobile */}
+          <div className="flex justify-center items-center gap-6 mt-8 border-t border-gray-100 pt-6">
+            <a href="mailto:contact@srisaikumar.com" className="text-neutral-600 hover:text-primary transition-colors">
+              <Mail size={20} />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-primary transition-colors">
+              <Facebook size={20} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-primary transition-colors">
+              <Instagram size={20} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-primary transition-colors">
+              <Twitter size={20} />
+            </a>
+          </div>
         </div>
       )}
     </header>

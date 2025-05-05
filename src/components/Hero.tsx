@@ -6,57 +6,54 @@ import Gap from './Gap';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center pt-20 pb-20 overflow-hidden bg-gradient-to-b from-neutral-50 to-neutral-100">
-      <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center">
-        {/* Welcome text with color animation */}
-        <FadeIn delay={0} className="mb-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-light italic text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-primary animate-gradient-x hover-text">
-            Welcome to our fancy world of joy & elegance
-          </h2>
-        </FadeIn>
-        
-        {/* Store image */}
-        <FadeIn delay={0.1}>
-          <div className="w-full max-w-3xl mx-auto mb-8 rounded-lg overflow-hidden shadow-xl">
-            <img 
-              src="/public/lovable-uploads/c6799f2d-7865-4ab5-bbb8-d6c4100c6110.png" 
-              alt="Sri Sai Kumar Fancy Shop" 
-              className="w-full h-auto"
-            />
-          </div>
-        </FadeIn>
-        
-        <FadeIn delay={0.2}>
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 mb-6">
-              Welcome to <span className="text-primary block">SRI SAI KUMAR FANCY SHOP</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-neutral-700 font-light italic mb-8">
-              "Your one-stop destination for all things fancy - bringing joy, elegance, and creativity to your life"
-            </p>
-            
-            <p className="text-lg md:text-xl text-neutral-600 mb-10">
-              Explore our wide collection of fancy toys, thoughtful gifts, premium watches, beautiful jewelry, and festive decorations for all your special occasions.
-            </p>
-
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Button href="#products" className="min-w-[180px]">
-                Explore Products
-              </Button>
-              <Button href="#contact" variant="outline" className="min-w-[180px]">
-                Contact Us
-              </Button>
-            </div>
+    <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-white">
+      {/* Background image */}
+      <img 
+        src="/public/lovable-uploads/02e17fdd-0a86-4b2b-a67c-f203fa70402e.png" 
+        alt="Fancy Shop Interior" 
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center text-white my-20 md:my-0">
+        <FadeIn delay={0} className="text-center max-w-3xl">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+            <span className="block mb-2 hover-text text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-white/70 animate-gradient-x">
+              Living Made Better
+            </span>
+            <span className="text-red-500">.</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto">
+            "Your one-stop destination for all things fancy - bringing joy, elegance, and creativity to your life"
+          </p>
+          
+          <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto">
+            Explore our wide collection of fancy toys, thoughtful gifts, premium watches, beautiful jewelry, and festive decorations for all your special occasions.
+          </p>
+          
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <Button 
+              href="#products" 
+              variant="primary" 
+              size="lg"
+              className="min-w-[180px] bg-white text-neutral-800 hover:bg-neutral-100"
+            >
+              Explore Products
+            </Button>
+            <Button 
+              href="#contact" 
+              variant="outline" 
+              size="lg"
+              className="min-w-[180px] border-white text-white hover:bg-white/20"
+            >
+              Contact Us
+            </Button>
           </div>
         </FadeIn>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 left-10 w-72 h-72 bg-secondary/5 rounded-full blur-3xl"></div>
-      
-      <Gap />
     </section>
   );
 };
