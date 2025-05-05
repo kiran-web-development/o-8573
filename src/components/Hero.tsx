@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-white">
       {/* Background image */}
       <img 
-        src="/public/lovable-uploads/02e17fdd-0a86-4b2b-a67c-f203fa70402e.png" 
+        src="/public/lovable-uploads/34a58283-8b82-48f9-88f4-2c88b069921d.png" 
         alt="Fancy Shop Interior" 
         className="absolute inset-0 w-full h-full object-cover"
       />
