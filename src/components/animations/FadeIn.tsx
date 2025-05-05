@@ -73,4 +73,5 @@ const FadeIn: React.FC<FadeInProps> = ({
   );
 };
 
+export { FadeIn };
 export default FadeIn;

@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { FadeIn } from './animations/FadeIn';
-import { Button } from './ui-custom/Button';
+import FadeIn from './animations/FadeIn';
+import Button from './ui-custom/Button';
 import Gap from './Gap';
 
 const Hero = () => {
@@ -38,7 +38,8 @@ const Hero = () => {
       <div className="absolute top-20 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-secondary/5 rounded-full blur-3xl"></div>
       
-      <Gap size={10} />
+      {/* Removing the size prop from Gap since it's not supported */}
+      <Gap />
     </section>
   );
 };
