@@ -48,7 +48,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Contact Information */}
           <FadeIn>
-            <h3 className="text-xl font-bold mb-6">SRI SAI KUMAR<span className="text-red-500">.</span></h3>
+            <h3 className="text-xl font-bold mb-6">SRI SAI KUMAR FANCY STORE<span className="text-red-500"></span></h3>
             <p className="text-neutral-600 mb-6">
               Your one-stop destination for all things fancy - bringing joy, elegance, and creativity to your life.
             </p>
@@ -63,7 +63,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-neutral-500" />
-                <a href="mailto:contact@srisaikumar.com" className="text-sm text-neutral-600 hover:text-primary">contact@srisaikumar.com</a>
+                <a href="mailto:contact@srisaikumar.com" className="text-sm text-neutral-600 hover:text-primary">contact@srixx.com</a>
               </div>
             </div>
           </FadeIn>
@@ -140,7 +140,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           </div>
           
           <div className="text-sm text-neutral-500">
-            Designed with ❤️ for our customers
+            Designed with ❤️ for our customers | kiran kumar
           </div>
         </div>
       </div>

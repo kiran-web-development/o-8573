@@ -1,63 +1,52 @@
-
 import React from 'react';
-import { Gift, Watch, Image as ImageIcon, ShoppingBag } from 'lucide-react';
 import FadeIn from './animations/FadeIn';
 
-type ProductCategory = {
-  id: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-};
-
-const productCategories: ProductCategory[] = [
-  {
-    id: "toys",
-    title: "Fancy Toys",
-    description: "Delightful toys for children of all ages to inspire imagination and fun.",
-    icon: <ShoppingBag className="h-10 w-10 text-primary" />
-  },
-  {
-    id: "gifts",
-    title: "Special Gifts",
-    description: "Thoughtful and unique gift items for every occasion and celebration.",
-    icon: <Gift className="h-10 w-10 text-primary" />
-  },
-  {
-    id: "watches",
-    title: "Premium Watches",
-    description: "Stylish timepieces for men and women that combine elegance with functionality.",
-    icon: <Watch className="h-10 w-10 text-primary" />
-  },
-  {
-    id: "jewellery",
-    title: "Beautiful Jewelry",
-    description: "Exquisite jewelry pieces to add sparkle to your special occasions.",
-    icon: <ImageIcon className="h-10 w-10 text-primary" />
-  }
-];
-
 const ProductsSection = () => {
+  const products = [
+    {
+      title: "Fancy Toys",
+      description: "Unique and entertaining toys for all ages",
+      image: "/Image-uploads/34a58283-8b82-48f9-88f4-2c88b069921d.png"
+    },
+    {
+      title: "Special Gifts",
+      description: "Perfect presents for every occasion",
+      image: "/Image-uploads/af28398b-9e23-4e2b-9de1-bda457e09fd8.png"
+    },
+    {
+      title: "Premium Watches",
+      description: "Elegant timepieces for every style",
+      image: "/Image-uploads/c6799f2d-7865-4ab5-bbb8-d6c4100c6110.png"
+    },
+    {
+      title: "Beautiful Jewelry",
+      description: "Stunning accessories and ornaments",
+      image: "/Image-uploads/a0278ce1-b82d-4ed6-a186-14a9503ef65c.png"
+    }
+  ];
+
   return (
-    <section id="products" className="py-16 md:py-24 bg-white">
+    <section id="products" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <FadeIn>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Products</h2>
-        </FadeIn>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Products</h2>
+          <p className="text-lg text-neutral-600">Discover our amazing collection</p>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {productCategories.map((category) => (
-            <FadeIn key={category.id} delay={0.1}>
-              <div className="bg-neutral-50 p-6 rounded-lg border border-neutral-100 hover:shadow-md transition-all duration-300 h-full flex flex-col">
-                <div className="mb-4 flex justify-center">
-                  {category.icon}
+          {products.map((product, index) => (
+            <FadeIn key={product.title} delay={index * 0.1}>
+              <div className="bg-neutral-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-64">
+                  <img 
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-center">{category.title}</h3>
-                <p className="text-neutral-600 text-center">{category.description}</p>
-                <div className="mt-auto pt-4 text-center">
-                  <a href={`#${category.id}`} className="text-primary hover:underline font-medium">
-                    Explore {category.title} →
-                  </a>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
+                  <p className="text-neutral-600">{product.description}</p>
                 </div>
               </div>
             </FadeIn>
